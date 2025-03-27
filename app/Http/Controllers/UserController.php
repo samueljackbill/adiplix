@@ -16,11 +16,6 @@ class UserController extends Controller
         return view('users.index', ['users' => $users]);
     }
 
-    public function show(User $user)
-    {
-        return view('users.show', ['user' => $user]);
-    }
-
     public function create()
     {
         // Carregar a VIEW
@@ -41,6 +36,11 @@ class UserController extends Controller
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
         return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
+    }
+
+    public function show(User $user)
+    {
+        return view('users.show', ['user' => $user]);
     }
 
     public function edit(User $user)

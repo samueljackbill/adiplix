@@ -77,3 +77,8 @@ Executar as bibliotecas Node.js
 ```
 npm run dev
 ```
+
+Criar a migration Task
+```
+php artisan make:migration create_tasks_table
+```

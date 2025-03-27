@@ -24,21 +24,15 @@ class TaskRequest extends FormRequest
         $taskId = $this->route('task');
 
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:tasks,email,' . ($taskId ? $taskId->id : null),
-            'password' => 'required|min:6',
+            'title' => 'required|unique:tasks,title,' . ($taskId ? $taskId->id : null),
         ];
     }
 
     public function messages(): array
     {
         return[
-            'name.required' => 'Campo nome é obrigatório!',
-            'email.required' => 'Campo e-mail é obrigatório!',
-            'email.email' => 'Necessário enviar e-mail válido!',
-            'email.unique' => 'O e-mail já está cadastrado!',
-            'password.required' => 'Campo senha é obrigatório!',
-            'password.min' => 'Senha com no mínimo :min caracteres!',
+            'title.required' => 'Campo título é obrigatório!',
+            'title.unique' => 'A tarefa já está cadastrada!',
         ];
     }
 }
