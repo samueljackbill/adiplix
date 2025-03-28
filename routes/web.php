@@ -1,13 +1,19 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /* Visão geral */
-Route::get('/', [UserController::class, 'index'])->name('user.index');
+/*Route::get('/', [IndexController::class, 'index'])->name('index.index');*/
+Route::get('students', [StudentController::class, 'index'])->name('students');
+Route::get('standards', [StudentController::class, 'getStandard'])->name('standards');
+Route::get('results', [StudentController::class, 'getResult'])->name('results');
+Route::get('students/records', [StudentController::class, 'records'])->name('students/records');
 
 /* Pessoas */
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
 Route::get('/show-user/{user}', [UserController::class, 'show'])->name('user.show');
 Route::get('/create-user', [UserController::class, 'create'])->name('user.create');
 Route::post('/store-user', [UserController::class, 'store'])->name('user.store');

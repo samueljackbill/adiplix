@@ -61,6 +61,8 @@
                         placeholder="Senha com mínimo 6 caracteres" value="<?php echo e(old('password')); ?>">
                 </div>
 
+                
+
                 <div class="col-12">
                     <button type="submit" class="btn btn-dark btn-sm">Cadastrar</button>
                 </div>

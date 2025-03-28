@@ -44,6 +44,8 @@
                         placeholder="Senha com mínimo 6 caracteres" value="{{ old('password') }}">
                 </div>
 
+                
+
                 <div class="col-12">
                     <button type="submit" class="btn btn-dark btn-sm">Cadastrar</button>
                 </div>

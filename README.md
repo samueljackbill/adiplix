@@ -2,8 +2,10 @@
 
 * PHP 8.2 ou superior
 * Composer
+* Node.js 20 ou superior
 
 ## COMO RODAR O PROJETO BAIXADO
+
 
 ## Sequencia para criar o projeto
 Criar o projeto com Laravel
@@ -81,4 +83,19 @@ npm run dev
 Criar a migration Task
 ```
 php artisan make:migration create_tasks_table
+```
+
+Criar Seeder
+```
+php artisan make:seeder UsersSeeder
+```
+
+Executar Seeder
+```
+php artisan db:seed
+```
+
+Instalar jQuery
+```
+npm install jquery
 ```
